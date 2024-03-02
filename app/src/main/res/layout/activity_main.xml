@@ -22,13 +22,34 @@
         android:layout_margin="40dp"
         android:layout_marginBottom="40dp"
         app:srcCompat="@drawable/car" />
+
+    <Switch
+        android:id="@+id/switch_mode"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:text="Slow/Fast" />
     <com.google.android.material.button.MaterialButton
         android:id="@+id/start_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Start"
+        android:text="ArrowMode"
         android:textSize="32sp"
         android:textColor="#bb8044"
         />
-
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/start_button_Sensor"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="SensorMode"
+        android:textSize="32sp"
+        android:textColor="#bb8044"
+        />
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/start_button_RecordTable"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="RecordTable"
+        android:textSize="32sp"
+        android:textColor="#bb8044"
+        />
 </LinearLayout>

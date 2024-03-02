@@ -7,8 +7,16 @@
     tools:context=".GameActivity"
     android:background="@drawable/road">
 
+<!--    <androidx.appcompat.widget.LinearLayoutCompat-->
+<!--        android:id="@+id/road_onee"-->
+<!--        android:layout_width="130dp"-->
+<!--        android:layout_height="match_parent"-->
+<!--        android:layout_alignParentRight="true"-->
+<!--        android:orientation="vertical"-->
+<!--        android:gravity="center"-->
+<!--        >-->
     <androidx.appcompat.widget.LinearLayoutCompat
-        android:id="@+id/road_onee"
+        android:id="@+id/road_oneee"
         android:layout_width="130dp"
         android:layout_height="match_parent"
         android:layout_alignParentRight="true"
@@ -78,6 +86,89 @@
             android:layout_marginBottom="60dp"
             android:visibility="invisible"
             app:srcCompat="@drawable/rock"/>
+        </androidx.appcompat.widget.LinearLayoutCompat>
+<!--    </androidx.appcompat.widget.LinearLayoutCompat>-->
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:id="@+id/road_oneeee"
+        android:layout_width="130dp"
+        android:layout_height="match_parent"
+        android:layout_alignParentRight="true"
+        android:orientation="vertical"
+        android:gravity="center"
+        >
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:id="@+id/road_oneeeee"
+            android:layout_width="130dp"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:orientation="vertical"
+            android:gravity="center">
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/road_one11"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:scaleType="centerCrop"
+                android:visibility="invisible"
+                app:srcCompat="@drawable/coinicon"/>
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/road_one22"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:scaleType="centerCrop"
+                android:layout_marginTop="10dp"
+                android:visibility="invisible"
+                app:srcCompat="@drawable/coinicon"/>
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/road_one33"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:scaleType="centerCrop"
+                android:layout_marginTop="10dp"
+                android:visibility="invisible"
+                app:srcCompat="@drawable/coinicon"/>
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/road_one44"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:scaleType="centerCrop"
+                android:layout_marginTop="10dp"
+                android:visibility="invisible"
+                app:srcCompat="@drawable/coinicon"/>
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/road_one55"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:scaleType="centerCrop"
+                android:layout_marginTop="10dp"
+                android:visibility="invisible"
+                app:srcCompat="@drawable/coinicon"/>
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/road_one66"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:scaleType="centerCrop"
+                android:layout_marginTop="10dp"
+                android:visibility="invisible"
+                app:srcCompat="@drawable/coinicon"/>
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/road_one77"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:scaleType="centerCrop"
+                android:layout_marginTop="10dp"
+                android:visibility="invisible"
+                app:srcCompat="@drawable/coinicon"/>
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/road_one88"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:scaleType="centerCrop"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="60dp"
+                android:visibility="invisible"
+                app:srcCompat="@drawable/coinicon"/>
+        </androidx.appcompat.widget.LinearLayoutCompat>
     </androidx.appcompat.widget.LinearLayoutCompat>
 
     <androidx.appcompat.widget.LinearLayoutCompat
@@ -86,7 +177,7 @@
         android:layout_height="match_parent"
         android:layout_marginStart="12dp"
         android:layout_marginEnd="10dp"
-        android:layout_toStartOf="@+id/road_onee"
+        android:layout_toStartOf="@+id/road_oneee"
         android:layout_toEndOf="@+id/road_threee"
         android:orientation="vertical"
         android:gravity="center">
@@ -154,6 +245,82 @@
             android:layout_marginBottom="60dp"
             android:visibility="invisible"
             app:srcCompat="@drawable/rock"/>
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:id="@+id/road_twooo"
+        android:layout_width="130dp"
+        android:layout_height="match_parent"
+        android:layout_marginStart="12dp"
+        android:layout_marginEnd="10dp"
+        android:layout_toStartOf="@+id/road_oneee"
+        android:layout_toEndOf="@+id/road_threee"
+        android:orientation="vertical"
+        android:gravity="center">
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/road_two11"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:scaleType="centerCrop"
+            android:visibility="invisible"
+            app:srcCompat="@drawable/coinicon"/>
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/road_two22"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:scaleType="centerCrop"
+            android:layout_marginTop="10dp"
+            android:visibility="invisible"
+            app:srcCompat="@drawable/coinicon"/>
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/road_two33"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:scaleType="centerCrop"
+            android:layout_marginTop="10dp"
+            android:visibility="invisible"
+            app:srcCompat="@drawable/coinicon"/>
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/road_two44"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:scaleType="centerCrop"
+            android:layout_marginTop="10dp"
+            android:visibility="invisible"
+            app:srcCompat="@drawable/coinicon"/>
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/road_two55"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:scaleType="centerCrop"
+            android:layout_marginTop="10dp"
+            android:visibility="invisible"
+            app:srcCompat="@drawable/coinicon"/>
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/road_two66"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:scaleType="centerCrop"
+            android:layout_marginTop="10dp"
+            android:visibility="invisible"
+            app:srcCompat="@drawable/coinicon"/>
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/road_two77"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:scaleType="centerCrop"
+            android:layout_marginTop="10dp"
+            android:visibility="invisible"
+            app:srcCompat="@drawable/coinicon"/>
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/road_two88"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:scaleType="centerCrop"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="60dp"
+            android:visibility="invisible"
+            app:srcCompat="@drawable/coinicon"/>
     </androidx.appcompat.widget.LinearLayoutCompat>
 
     <androidx.appcompat.widget.LinearLayoutCompat
@@ -227,6 +394,79 @@
             android:layout_marginBottom="60dp"
             android:visibility="invisible"
             app:srcCompat="@drawable/rock"/>
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:id="@+id/road_threeee"
+        android:layout_width="130dp"
+        android:layout_height="match_parent"
+        android:layout_alignParentLeft="true"
+        android:orientation="vertical"
+        android:gravity="center">
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/road_three11"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:scaleType="centerCrop"
+            android:visibility="invisible"
+            app:srcCompat="@drawable/coinicon"/>
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/road_three22"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:scaleType="centerCrop"
+            android:layout_marginTop="10dp"
+            android:visibility="invisible"
+            app:srcCompat="@drawable/coinicon"/>
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/road_three33"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:scaleType="centerCrop"
+            android:layout_marginTop="10dp"
+            android:visibility="invisible"
+            app:srcCompat="@drawable/coinicon"/>
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/road_three44"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:scaleType="centerCrop"
+            android:layout_marginTop="10dp"
+            android:visibility="invisible"
+            app:srcCompat="@drawable/coinicon"/>
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/road_three55"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:scaleType="centerCrop"
+            android:layout_marginTop="10dp"
+            android:visibility="invisible"
+            app:srcCompat="@drawable/coinicon"/>
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/road_three66"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:scaleType="centerCrop"
+            android:layout_marginTop="10dp"
+            android:visibility="invisible"
+            app:srcCompat="@drawable/coinicon"/>
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/road_three77"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:scaleType="centerCrop"
+            android:layout_marginTop="10dp"
+            android:visibility="invisible"
+            app:srcCompat="@drawable/coinicon"/>
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/road_three88"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:scaleType="centerCrop"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="60dp"
+            android:visibility="invisible"
+            app:srcCompat="@drawable/coinicon"/>
     </androidx.appcompat.widget.LinearLayoutCompat>
     <androidx.appcompat.widget.LinearLayoutCompat
         android:layout_width="match_parent"
