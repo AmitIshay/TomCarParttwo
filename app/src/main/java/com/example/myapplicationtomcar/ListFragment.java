@@ -48,8 +48,9 @@ public class ListFragment extends Fragment {
             Player p = new Player();
             p.setPlayerName(GameManager.getPlayerName());
             p.setPlayerScore(GameManager.getScore());
-            p.setPlayerLatitude(13.5);
-            p.setPlayerLongitude(34.5);
+            p.setPlayerLatitude(32.08);
+            p.setPlayerLongitude(34.8);
+//            p.setLocation(GameManager.getPlayerLocation());
             pL.addPlayer(p);
         }
 //        Player p = new Player();

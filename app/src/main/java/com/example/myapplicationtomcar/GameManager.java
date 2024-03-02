@@ -8,6 +8,7 @@ import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.location.Location;
+import android.location.LocationManager;
 import android.media.MediaPlayer;
 import android.os.CountDownTimer;
 import android.os.VibrationEffect;
@@ -15,6 +16,7 @@ import android.os.Vibrator;
 import android.text.Editable;
 import android.text.InputType;
 import android.text.TextWatcher;
+import android.util.Log;
 import android.widget.EditText;
 import android.widget.Switch;
 import android.widget.Toast;
@@ -56,6 +58,8 @@ public class GameManager {
     //Boolean switchStateFast;
     String type;
     private static String playerName;
+    private static LocationManager locationManager;
+    static Location playerLocation;
 
     public GameManager(Context context,int life){
         this.life = life;
@@ -84,6 +88,8 @@ public class GameManager {
         switchStateMode = switch_mode.isChecked();
         //switchStateFast = switch_fast.isChecked();
         this.type = MainActivity.getType();
+        locationManager = (LocationManager) context.getSystemService(Context.LOCATION_SERVICE);
+
 
     }
     public void moveLeft(){
@@ -238,17 +244,19 @@ public class GameManager {
             @Override
             public void onClick(DialogInterface dialog, int which) {
                 playerName = input.getText().toString();
-                setPlayerName(playerName);
-//                if (!playerName.isEmpty()) {
-                    //Location playerLocation = SignalGenerator.getInstance().getCurrentLocation(); // assuming a getCurrentLocation() function exists that returns the player's current location
-//                    Player player = new Player();
-//                    player.setPlayerName(playerName);
-//                    player.setPlayerScore(getScore());
-//                    player.setPlayerLongitude(34.4);
-//                    player.setPlayerLatitude(12.3);
+                //setPlayerName(playerName);
+                if (!playerName.isEmpty()) {
+                    playerLocation = MapFragment.getCurrentLocation();
+                   // playerLocation = getCurrentLocation();
+                    Log.i("amitamit", String.valueOf(playerLocation));
+                    Player player = new Player();
+                    player.setPlayerName(playerName);
+                    player.setPlayerScore(getScore());
+                    player.setPlayerLongitude(32.08);
+                    player.setPlayerLatitude(34.8);
                     //player.setLocation(playerLocation);
-//                    playAdapter.addPlayerFromGameOver(player);
-//                }
+                    //playAdapter.addPlayerFromGameOver(player);
+                }
                 goToRecordActivity();
             }
         });
@@ -449,6 +457,10 @@ public class GameManager {
         return playerName;
     }
 
+    public static Location getPlayerLocation() {
+        return playerLocation;
+    }
+
     public void setPlayerName(String playerName) {
         this.playerName = playerName;
     }
@@ -468,5 +480,34 @@ public class GameManager {
     public int increaseNumOfCrashes(){
         numOfCrashes += 1;
         return numOfCrashes;
+    }
+    public Location getCurrentLocation() {
+        try {
+            locationManager.requestLocationUpdates(LocationManager.GPS_PROVIDER, 0, 0, new android.location.LocationListener() {
+                @Override
+                public void onLocationChanged(Location location) {
+                    // Do nothing
+                }
+
+                @Override
+                public void onStatusChanged(String provider, int status, android.os.Bundle extras) {
+                    // Do nothing
+                }
+
+                @Override
+                public void onProviderEnabled(String provider) {
+                    // Do nothing
+                }
+
+                @Override
+                public void onProviderDisabled(String provider) {
+                    // Do nothing
+                }
+            });
+            return locationManager.getLastKnownLocation(LocationManager.GPS_PROVIDER);
+        } catch (SecurityException e) {
+            e.printStackTrace();
+        }
+        return null;
     }
 }
