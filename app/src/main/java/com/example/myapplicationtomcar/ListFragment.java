@@ -44,7 +44,7 @@ public class ListFragment extends Fragment {
         linearLayoutManager.setOrientation(RecyclerView.VERTICAL);
         recycler_list.setLayoutManager(linearLayoutManager);
         recycler_list.setAdapter(playerAdapter);
-        if(!GameManager.getPlayerName().isEmpty()) {
+        if(MainActivity.getNum() == 1) {
             Player p = new Player();
             p.setPlayerName(GameManager.getPlayerName());
             p.setPlayerScore(GameManager.getScore());

@@ -29,6 +29,7 @@ public class MainActivity extends AppCompatActivity {
     private MaterialButton start_button_RecordTable;
     private static Switch switch_mode;
     private static String type;
+    private static  int num;
 
     //private static Switch switch_fast;
 //    Boolean switchStateSlow;
@@ -46,6 +47,7 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
 //                Intent i = new Intent(getApplicationContext(),GameActivity.class);
                 setType("b");
+                num = 1;
                 //type = "button";
 //                i.putExtra("Type",type);
 ////                i.putExtra("switchStateFast",switchStateFast);
@@ -57,6 +59,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 setType("s");
+                num = 1;
                 //type = "sensor";
 //                Intent i = new Intent(getApplicationContext(),GameActivity.class);
 //                i.putExtra("Type",type);
@@ -68,6 +71,7 @@ public class MainActivity extends AppCompatActivity {
         start_button_RecordTable.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                num = 0;
                 Intent i = new Intent(getApplicationContext(),RecordTableActivity.class);
                 startActivity(i);
             }
@@ -93,6 +97,10 @@ public class MainActivity extends AppCompatActivity {
 
     public static String getType() {
         return type;
+    }
+
+    public static int getNum() {
+        return num;
     }
 
     public void setType(String type) {
