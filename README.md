@@ -55,9 +55,6 @@
 2. Enable location access in app permissions.
 3. Run the game on an emulator or physical device with GPS enabled.
 
-## 👨‍💻 Author
-
-- 🧑 Amit (presumed developer)
 
 ---
 
